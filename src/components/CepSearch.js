@@ -105,13 +105,13 @@ const ResultLabel = styled.span`
 const ActionButton = styled.button`
   background: none;
   border: none;
-  color: #4A90E2;
-  cursor: pointer;
+  color: ${props => props.disabled ? '#CBD5E0' : '#4A90E2'};
+  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   padding: 0.5rem;
   transition: color 0.2s;
 
   &:hover {
-    color: #357ABD;
+    color: ${props => props.disabled ? '#CBD5E0' : '#357ABD'};
   }
 `;
 
@@ -229,7 +229,11 @@ function CepSearch() {
               <ResultLabel>CEP:</ResultLabel>
               <ResultValue>
                 <span>{address.cep}</span>
-                <ActionButton onClick={() => copyToClipboard(address.cep)} title="Copiar CEP">
+                <ActionButton 
+                  onClick={() => copyToClipboard(address.cep)} 
+                  title="Copiar CEP"
+                  disabled={!address.cep}
+                >
                   <FaCopy />
                 </ActionButton>
               </ResultValue>
@@ -238,7 +242,11 @@ function CepSearch() {
               <ResultLabel>Logradouro:</ResultLabel>
               <ResultValue>
                 <span>{address.logradouro}</span>
-                <ActionButton onClick={() => copyToClipboard(address.logradouro)} title="Copiar Logradouro">
+                <ActionButton 
+                  onClick={() => copyToClipboard(address.logradouro)} 
+                  title="Copiar Logradouro"
+                  disabled={!address.logradouro}
+                >
                   <FaCopy />
                 </ActionButton>
               </ResultValue>
@@ -247,7 +255,11 @@ function CepSearch() {
               <ResultLabel>Bairro:</ResultLabel>
               <ResultValue>
                 <span>{address.bairro}</span>
-                <ActionButton onClick={() => copyToClipboard(address.bairro)} title="Copiar Bairro">
+                <ActionButton 
+                  onClick={() => copyToClipboard(address.bairro)} 
+                  title="Copiar Bairro"
+                  disabled={!address.bairro}
+                >
                   <FaCopy />
                 </ActionButton>
               </ResultValue>
@@ -256,7 +268,11 @@ function CepSearch() {
               <ResultLabel>Cidade:</ResultLabel>
               <ResultValue>
                 <span>{address.localidade}</span>
-                <ActionButton onClick={() => copyToClipboard(address.localidade)} title="Copiar Cidade">
+                <ActionButton 
+                  onClick={() => copyToClipboard(address.localidade)} 
+                  title="Copiar Cidade"
+                  disabled={!address.localidade}
+                >
                   <FaCopy />
                 </ActionButton>
               </ResultValue>
@@ -265,7 +281,11 @@ function CepSearch() {
               <ResultLabel>Estado:</ResultLabel>
               <ResultValue>
                 <span>{address.uf}</span>
-                <ActionButton onClick={() => copyToClipboard(address.uf)} title="Copiar Estado">
+                <ActionButton 
+                  onClick={() => copyToClipboard(address.uf)} 
+                  title="Copiar Estado"
+                  disabled={!address.uf}
+                >
                   <FaCopy />
                 </ActionButton>
               </ResultValue>
