@@ -62,7 +62,7 @@ function App() {
         </AdContainer>
         <CepSearch />
         <Footer>
-          Todos os direitos reservados
+          Desenvolvido por Bruno Mendes
         </Footer>
       </AppContainer>
     </>

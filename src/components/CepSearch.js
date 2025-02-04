@@ -77,6 +77,7 @@ const ResultItem = styled.div`
   }
 `;
 
+// Mantenha apenas esta declaração do ResultValue
 const ResultValue = styled.div`
   display: flex;
   align-items: center;
@@ -99,15 +100,7 @@ const ResultLabel = styled.span`
   }
 `;
 
-const ResultValue = styled.span`
-  font-family: 'Roboto Mono', monospace;
-  color: #2D3748;
-  text-align: right;
-  
-  @media (max-width: 480px) {
-    text-align: left;
-  }
-`;
+// Remova a segunda declaração do ResultValue que estava aqui
 
 const ActionButton = styled.button`
   background: none;
