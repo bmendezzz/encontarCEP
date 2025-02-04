@@ -74,11 +74,13 @@ const ResultItem = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     align-items: stretch;
-    
-    & > div {
-      word-break: break-word;
-    }
   }
+`;
+
+const ResultValue = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 const ResultLabel = styled.span`
@@ -226,28 +228,48 @@ function CepSearch() {
           <>
             <ResultItem>
               <ResultLabel>CEP:</ResultLabel>
-              <div>
-                <ResultValue>{address.cep}</ResultValue>
+              <ResultValue>
+                <span>{address.cep}</span>
                 <ActionButton onClick={() => copyToClipboard(address.cep)} title="Copiar CEP">
                   <FaCopy />
                 </ActionButton>
-              </div>
+              </ResultValue>
             </ResultItem>
             <ResultItem>
               <ResultLabel>Logradouro:</ResultLabel>
-              <ResultValue>{address.logradouro}</ResultValue>
+              <ResultValue>
+                <span>{address.logradouro}</span>
+                <ActionButton onClick={() => copyToClipboard(address.logradouro)} title="Copiar Logradouro">
+                  <FaCopy />
+                </ActionButton>
+              </ResultValue>
             </ResultItem>
             <ResultItem>
               <ResultLabel>Bairro:</ResultLabel>
-              <ResultValue>{address.bairro}</ResultValue>
+              <ResultValue>
+                <span>{address.bairro}</span>
+                <ActionButton onClick={() => copyToClipboard(address.bairro)} title="Copiar Bairro">
+                  <FaCopy />
+                </ActionButton>
+              </ResultValue>
             </ResultItem>
             <ResultItem>
               <ResultLabel>Cidade:</ResultLabel>
-              <ResultValue>{address.localidade}</ResultValue>
+              <ResultValue>
+                <span>{address.localidade}</span>
+                <ActionButton onClick={() => copyToClipboard(address.localidade)} title="Copiar Cidade">
+                  <FaCopy />
+                </ActionButton>
+              </ResultValue>
             </ResultItem>
             <ResultItem>
               <ResultLabel>Estado:</ResultLabel>
-              <ResultValue>{address.uf}</ResultValue>
+              <ResultValue>
+                <span>{address.uf}</span>
+                <ActionButton onClick={() => copyToClipboard(address.uf)} title="Copiar Estado">
+                  <FaCopy />
+                </ActionButton>
+              </ResultValue>
             </ResultItem>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
               <ActionButton onClick={clearSearch} title="Limpar busca">
