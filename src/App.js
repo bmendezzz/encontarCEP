@@ -51,7 +51,7 @@ function App() {
         </Header>
         <CepSearch />
         <Footer>
-          © 2024 MeuSiteCEP. Todos os direitos reservados.
+          Todos os direitos reservados
         </Footer>
       </AppContainer>
     </>
