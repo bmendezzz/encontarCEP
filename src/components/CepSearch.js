@@ -68,17 +68,37 @@ const ResultItem = styled.div`
   margin: 1rem 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1rem;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: stretch;
+    
+    & > div {
+      word-break: break-word;
+    }
+  }
 `;
 
 const ResultLabel = styled.span`
   font-weight: 600;
   color: #4A5568;
+  min-width: 100px;
+  
+  @media (max-width: 480px) {
+    margin-bottom: 0.25rem;
+  }
 `;
 
 const ResultValue = styled.span`
   font-family: 'Roboto Mono', monospace;
   color: #2D3748;
+  text-align: right;
+  
+  @media (max-width: 480px) {
+    text-align: left;
+  }
 `;
 
 const ActionButton = styled.button`
