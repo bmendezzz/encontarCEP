@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { FaSearch, FaCopy, FaTrash, FaEnvelope } from 'react-icons/fa';
+import { FaSearch, FaCopy, FaTrash } from 'react-icons/fa';
 
 const SearchContainer = styled.div`
   width: 100%;
@@ -128,11 +128,13 @@ const EmailButton = styled(Button)`
   }
 `;
 
+// Remove EmailSection, EmailInput, and EmailButton styled components
+
 function CepSearch() {
   const [cep, setCep] = useState('');
   const [address, setAddress] = useState(null);
   const [error, setError] = useState('');
-  const [email, setEmail] = useState('');
+  // removed email state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -189,8 +191,9 @@ function CepSearch() {
           type="text"
           value={cep}
           onChange={(e) => setCep(e.target.value)}
-          placeholder="Digite o CEP (ex: 12345-678)"
+          placeholder="Digite o CEP"
           maxLength="9"
+          aria-label="Digite o CEP para busca"
         />
         <Button type="submit">
           <FaSearch />
@@ -230,18 +233,6 @@ function CepSearch() {
               <ActionButton onClick={clearSearch} title="Limpar busca">
                 <FaTrash /> Limpar
               </ActionButton>
-
-              <EmailSection>
-                <EmailInput
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Digite seu email"
-                />
-                <EmailButton onClick={handleEmailSend}>
-                  <FaEnvelope /> Enviar por Email
-                </EmailButton>
-              </EmailSection>
             </div>
           </>
         )}
