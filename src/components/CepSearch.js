@@ -77,10 +77,17 @@ const ResultItem = styled.div`
   }
 `;
 
+// Remove a segunda declaração do ResultValue e mantenha apenas esta:
 const ResultValue = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: 'Roboto Mono', monospace;
+  color: #2D3748;
+  
+  @media (max-width: 480px) {
+    text-align: left;
+  }
 `;
 
 const ResultLabel = styled.span`
