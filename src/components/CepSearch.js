@@ -77,7 +77,6 @@ const ResultItem = styled.div`
   }
 `;
 
-// Remove a segunda declaração do ResultValue e mantenha apenas esta:
 const ResultValue = styled.div`
   display: flex;
   align-items: center;
