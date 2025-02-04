@@ -1,0 +1,43 @@
+BUSCADOR DE CEP - DOCUMENTAÇÃO
+
+1. FUNCIONALIDADES IMPLEMENTADAS
+- Busca de CEP via API ViaCEP
+- Interface responsiva para mobile e desktop
+- Validação de CEP (8 dígitos)
+- Copiar CEP para área de transferência
+- Limpar busca
+- SEO otimizado
+
+2. TECNOLOGIAS UTILIZADAS
+- React.js
+- Styled Components
+- Axios para requisições HTTP
+- React Icons
+- Vercel para deploy
+
+3. ESTRUTURA DO PROJETO
+- /src
+  - /components
+    - CepSearch.js (componente principal)
+  - /styles
+    - GlobalStyle.js (estilos globais)
+  - App.js (layout principal)
+  - index.js
+
+4. MELHORIAS REALIZADAS
+- Otimização para dispositivos móveis
+- Melhoria no SEO com meta tags
+- Remoção da funcionalidade de email (simplificação)
+- Ajustes no footer
+- Layout responsivo
+
+5. DEPLOY
+- Hospedado na Vercel
+- URL: https://encontar-cep.vercel.app
+
+6. PRÓXIMOS PASSOS POSSÍVEIS
+- Implementar histórico de buscas
+- Adicionar modo escuro
+- Melhorar acessibilidade
+- Adicionar mais validações
+- Implementar testes automatizados

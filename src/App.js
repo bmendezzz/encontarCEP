@@ -38,6 +38,14 @@ const Footer = styled.footer`
   font-size: 14px;
 `;
 
+// Adicionar espaço para anúncios
+const AdContainer = styled.div`
+  width: 100%;
+  max-width: 728px;
+  margin: 2rem auto;
+  text-align: center;
+`;
+
 function App() {
   return (
     <>
@@ -49,6 +57,9 @@ function App() {
           </Logo>
           <Title>Consulta de CEP</Title>
         </Header>
+        <AdContainer>
+          {/* Espaço para anúncios */}
+        </AdContainer>
         <CepSearch />
         <Footer>
           Todos os direitos reservados
